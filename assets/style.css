@@ -1,0 +1,77 @@
+:root {
+    --dark: rgb(55, 66, 83);
+    --light: rgb(113, 119, 192);
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    background-image: url("../assets/images/headerbg.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+header h1 {
+    position: relative;
+    font-size: 65px;
+    color: var(--light);
+    background-color: var(--dark);
+    margin-top:40px;
+    padding:20px;
+    padding-left:100px;
+    padding-left: 130px;
+    z-index: 3;
+    float:left;
+}
+header div {
+    position:relative;
+    background-color: var(--dark);
+    display: inline-block;
+    width: 125px;
+    height: 105px;
+    transform: skew(-35deg);
+    top:40px;
+    left:-61px;
+    z-index: 2;
+
+}
+header div:nth-child(3) {
+    left:-150px;
+    background-color: var(--light);
+    z-index: 1;
+}
+header div:nth-child(4) {
+    left:-230px;
+    z-index: 0;
+}
+nav {
+    position: relative;
+    color: var(--dark);
+    background-color: var(--light);
+    font-size: 25px;
+    padding:20px;
+    bottom: 20px;
+    top:100px;
+    
+}
+li {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    display: block
+}
+@media screen and (max-width:1080px) {
+    li {
+        display:grid;
+        columns: 1;
+        align-items: center;
+    }
+    header {
+        justify-content: center;
+    }
+}
