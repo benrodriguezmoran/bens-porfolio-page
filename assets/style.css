@@ -104,9 +104,12 @@ aside {
     flex: 0 0;
 }
 aside h1 {
-    color:var(--purple);
+    color:var(--blue);
     font-weight: bold;
     font-size: 35px;
+}
+aside h1:hover{
+    color:var(--purple)
 }
 p {
     font-size: 20px;
@@ -126,41 +129,62 @@ p {
     display: flex;
     background-color: var(--dark);
     color: var(--light);
-    height: 250px;
+    height: 350px;
     flex: 1 0 400px;
     margin:10px;
-    border-radius: 10px;
+    border-width: 10px;
     border-color: var(--dark);
     border-style: solid;
+    background-size:cover;
+    background-position: center;
 
 }
 #first-project {
     display: flex;
-    /* background-color: var(--dark); */
-    flex: 1 4 90%;
+    flex: 2 4 100%;
     align-self: flex-end;
     height: 650px;
     margin:10px;
-    border-radius: 10px;
+    border-width: 10px;
     border-color: var(--dark);
     border-style: solid;
-    background-image: url(../assets/images/projects/vector\ uav.png);
+    background-image: url(../assets/images/projects/vectorDrone.jpg);
     background-size:cover;
     background-position: center;
     
 }
 .container > div:hover{
-    box-shadow: 0 0 5px 5px var(--purple);
-}
-.container > * > img {
-    flex: 0 1;
-}
-.container:nth-child(1){
-    background-image: url(../assets/images/projects/HoriseonLanding.png);
-    background-size:cover;
-    background-position: center;
-}
+    box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
 
+}
+.container div h1 {
+    padding:15px;
+    margin:10px;
+    background-color: var(--dark);
+    margin-left: 0px;
+    margin-bottom: 20px;
+    height: 40px;
+    color:var(--light);
+    font-size: 20px;
+}
+.container > div:nth-child(2){
+    background-image: url(../assets/images/projects/FCU.jpg);
+}
+.container > div:nth-child(3){
+    background-image: url(../assets/images/projects/game-prealpha.png);
+}
+.container > div:nth-child(4){
+    background-image: url(../assets/images/projects/freecad.png);
+}
+.container > div:nth-child(5){
+    background-image: url(../assets/images/projects/HoriseonLanding.png);
+}
+.container > div:nth-child(6){
+    background-image: url(../assets/images/projects/printer.jpg);
+}
+.container > div:nth-child(7){
+    background-image: url(../assets/images/projects/electronics.jpg);
+}
 @media screen and (max-width:1080px) {
     #blank {
         height:250px;
@@ -185,7 +209,6 @@ p {
     }
     aside {
         width:100%;
-        align;
     }
     .container {
         justify-content: center;
