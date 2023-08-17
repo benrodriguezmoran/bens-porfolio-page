@@ -2,7 +2,7 @@
     --dark: rgb(39,41,50);
     --light: rgb(238,244,237);
     --blue: rgb(77,126,168);
-    --purple: rgb(183,150,172);
+    --purple: rgb(173, 115, 154);
 }
 * {
     font-family: 'DejaVu-Serif-Bold', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -20,6 +20,10 @@ header {
 header span{
     font-size:45px;
     color: var(--blue);
+}
+header span:hover{
+    font-size:45px;
+    color: var(--purple);
 }
 header h1 {
     font-size: 65px;
@@ -46,6 +50,7 @@ nav {
     font-size: 25px;
     justify-content: right;
     padding:8px;
+    padding-top: 5px;
 }
 li {
     color:var(--dark);
@@ -53,15 +58,16 @@ li {
     padding:5px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 15px;
     text-align: center;
-    background-image: linear-gradient(to top, transparent 2px, var(--blue) 2px);
+    background-image: linear-gradient(0deg, transparent 2px, var(--blue) 2px);
     background-size: 100% 16px; 
     background-repeat: no-repeat;
     background-position: 0 140%;
 }
 li:hover {
-    
-    box-shadow: 0px 0px 0px 2px var(--dark);
+    background-image: linear-gradient(0deg, transparent 2px, var(--purple) 2px);
+    box-shadow: 0px 0px 4px 2px var(--dark);
     border-radius: 2px;
 }
 
@@ -76,25 +82,31 @@ body {
 
 section {
     display: flex;
-    background-color: var(--light);
+    background-color: rgba(238,244,237,0.5);
     padding: 25px;
     margin:75px;
     border-radius: 10px;
+    
+}
+section p {
+    padding: 15px;
 }
 section:hover {
     box-shadow: 0px 0px 6px 4px var(--dark);
 }
 aside {
-    color:var(--blue);
-    font-weight: bold;
+    width: 160px;
     display: flex;
-    font-size: 35px;
-    background-color: var(--light);
     padding-right:50px;
     text-align: right;
     align-items: center;
     margin-right: 40px;
     flex: 0 0;
+}
+aside h1 {
+    color:var(--purple);
+    font-weight: bold;
+    font-size: 35px;
 }
 p {
     font-size: 20px;
@@ -102,32 +114,53 @@ p {
 }
 .container{
     display: flex;
+    flex: 1 1;
     flex-wrap: wrap;
     justify-content: left;
     flex-direction: row;
+    align-items: right;
     columns: 5;
     width: 100%;
 }
-.container > div {
+.card {
+    display: flex;
+    background-color: var(--dark);
     color: var(--light);
     height: 250px;
-    flex: 0 0 500px;
+    flex: 1 0 400px;
     margin:10px;
     border-radius: 10px;
     border-color: var(--dark);
     border-style: solid;
 
 }
-.first-project {
-    flex: 1 0 800px;
-    height: 450px;
+#first-project {
+    display: flex;
+    /* background-color: var(--dark); */
+    flex: 1 4 90%;
+    align-self: flex-end;
+    height: 650px;
+    margin:10px;
+    border-radius: 10px;
+    border-color: var(--dark);
+    border-style: solid;
+    background-image: url(../assets/images/projects/vector\ uav.png);
+    background-size:cover;
+    background-position: center;
+    
 }
 .container > div:hover{
     box-shadow: 0 0 5px 5px var(--purple);
 }
-.container div img {
-    width:100%
+.container > * > img {
+    flex: 0 1;
 }
+.container:nth-child(1){
+    background-image: url(../assets/images/projects/HoriseonLanding.png);
+    background-size:cover;
+    background-position: center;
+}
+
 @media screen and (max-width:1080px) {
     #blank {
         height:250px;
@@ -149,6 +182,10 @@ p {
     }
     section {
         display: block;
+    }
+    aside {
+        width:100%;
+        align;
     }
     .container {
         justify-content: center;
