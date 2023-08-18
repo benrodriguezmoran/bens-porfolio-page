@@ -88,7 +88,8 @@ section {
     padding: 25px;
     margin:75px;
     border-radius: 10px;
-    
+    margin-right: 200px;
+    margin-left: 200px;
 }
 section p {
     padding: 15px;
@@ -213,30 +214,37 @@ p {
 #About div > *:nth-child(4){
     
 }
-
+footer {
+    text-align: center;
+    background-color: var(--light);
+    padding: 20px;
+}
 /* project background images */
-.container > *:nth-child(2){
+#Projects .container > *:nth-child(2){
     background-image: url(./images/projects/FCU.jpg);
 }
-.container > *:nth-child(3){
+#Projects .container > *:nth-child(3){
     background-image: url(./images/projects/game-prealpha.png);
 }
-.container > *:nth-child(3){
+#Projects .container > *:nth-child(3){
     background-image: url(./images/projects/game-prealpha.png);
 }
-.container > *:nth-child(4){
+#Projects .container > *:nth-child(4){
     background-image: url(./images/projects/freecad.png);
 }
-.container > *:nth-child(5){
+#Projects .container > *:nth-child(5){
     background-image: url(./images/projects/HoriseonLanding.png);
 }
-.container > *:nth-child(6){
+#Projects .container > *:nth-child(6){
     background-image: url(./images/projects/printer.jpg);
 }
-.container > *:nth-child(7){
+#Projects .container > *:nth-child(7){
     background-image: url(./images/projects/electronics.jpg);
 }
 
+#Work .container > *:nth-child(1){
+    background-image: url(./images/work/generalinspection.png);
+}
 /* mobile compatible layout */
 @media screen and (max-width:1280px) {
     #About {
@@ -265,6 +273,8 @@ p {
     }
     section {
         display: block;
+        margin-right: 80px;
+        margin-left: 80px;
     }
     aside {
         display: block;
