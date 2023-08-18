@@ -191,7 +191,7 @@ p {
     align-items:end;
     justify-content: flex-end;
 }
-/* small image tiles */
+/* small image tiles, card class height override */
 #About > div {
     height: 400px;
 }
@@ -241,6 +241,12 @@ p {
 @media screen and (max-width:1280px) {
     #About {
         margin-top: 45%;
+    }
+    #About > div {
+        height: 600px;
+    }
+    .small-image {
+        height: 280px;
     }
     li {
         display:grid;
