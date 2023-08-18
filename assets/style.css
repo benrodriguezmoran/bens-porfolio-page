@@ -103,7 +103,7 @@ aside {
     width: 160px;
     display: flex;
     padding-right:50px;
-    text-align: right;
+    text-align: left;
     align-items: top;
     margin-right: 40px;
     flex: 0 0;
@@ -135,17 +135,19 @@ p {
     background-color: var(--dark);
     color: var(--light);
     height: 350px;
-    flex: 1 0 400px;
+    flex: 1 0 500px;
     margin:10px;
     border-width: 10px;
     border-color: var(--dark);
     border-style: solid;
     background-size:cover;
     background-position: center;
+    flex-wrap: wrap;
 
 }
+
 #first-project {
-    display: flex;
+    display:flex;
     flex: 2 4 100%;
     align-self: flex-end;
     height: 650px;
@@ -157,6 +159,13 @@ p {
     background-size:cover;
     background-position: center;
     
+}
+.small-image{
+    flex: 1 1 40%;
+    background-color: aliceblue;
+    margin: 5px;
+    width:20%;
+    height:180px;
 }
 .container > * {
     opacity: 0.9;
@@ -170,11 +179,42 @@ p {
     margin:10px;
     background-color: var(--dark);
     margin-left: 0px;
+    margin-bottom: 60px;
     padding-bottom:35px;
     height: 40px;
     color:var(--light);
     font-size: 20px;
+    text-align: left;
 }
+.container > * > p {
+    bottom: 0px;
+    align-items:end;
+    justify-content: flex-end;
+}
+/* small image tiles */
+#About > div {
+    height: 400px;
+}
+#About div > *:nth-child(1){
+    background-image: url(../assets/images/personal/luna.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#About div > *:nth-child(2){
+    background-image: url(../assets/images/personal/mochi.jpg);
+    background-size:cover;  
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#About div > *:nth-child(3){
+    
+}
+#About div > *:nth-child(4){
+    
+}
+
+/* project background images */
 .container > *:nth-child(2){
     background-image: url(../assets/images/projects/FCU.jpg);
 }
@@ -196,6 +236,8 @@ p {
 .container > *:nth-child(7){
     background-image: url(../assets/images/projects/electronics.jpg);
 }
+
+/* mobile compatible layout */
 @media screen and (max-width:1280px) {
     #About {
         margin-top: 45%;
