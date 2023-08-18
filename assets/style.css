@@ -75,7 +75,7 @@ li:hover {
 
 body {
     display: block;
-    background-image: url(../assets/images/background.png);
+    background-image: url(./images/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,7 +155,7 @@ p {
     border-width: 10px;
     border-color: var(--dark);
     border-style: solid;
-    background-image: url(../assets/images/projects/vectorDrone.jpg);
+    background-image: url(./images/projects/vectorDrone.jpg);
     background-size:cover;
     background-position: center;
     
@@ -196,13 +196,13 @@ p {
     height: 400px;
 }
 #About div > *:nth-child(1){
-    background-image: url(../assets/images/personal/luna.jpg);
+    background-image: url(./images/personal/luna.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 #About div > *:nth-child(2){
-    background-image: url(../assets/images/personal/mochi.jpg);
+    background-image: url(./images/personal/mochi.jpg);
     background-size:cover;  
     background-repeat: no-repeat;
     background-position: center;
@@ -216,25 +216,25 @@ p {
 
 /* project background images */
 .container > *:nth-child(2){
-    background-image: url(../assets/images/projects/FCU.jpg);
+    background-image: url(./images/projects/FCU.jpg);
 }
 .container > *:nth-child(3){
-    background-image: url(../assets/images/projects/game-prealpha.png);
+    background-image: url(./images/projects/game-prealpha.png);
 }
 .container > *:nth-child(3){
-    background-image: url(../assets/images/projects/game-prealpha.png);
+    background-image: url(./images/projects/game-prealpha.png);
 }
 .container > *:nth-child(4){
-    background-image: url(../assets/images/projects/freecad.png);
+    background-image: url(./images/projects/freecad.png);
 }
 .container > *:nth-child(5){
-    background-image: url(../assets/images/projects/HoriseonLanding.png);
+    background-image: url(./images/projects/HoriseonLanding.png);
 }
 .container > *:nth-child(6){
-    background-image: url(../assets/images/projects/printer.jpg);
+    background-image: url(./images/projects/printer.jpg);
 }
 .container > *:nth-child(7){
-    background-image: url(../assets/images/projects/electronics.jpg);
+    background-image: url(./images/projects/electronics.jpg);
 }
 
 /* mobile compatible layout */
