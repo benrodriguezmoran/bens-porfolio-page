@@ -19,6 +19,9 @@ header {
     z-index: 2;
     top: 0px;
 }
+header:hover {
+    box-shadow: 0px 0px 5px 5px var(--dark), 0px 0px 8px 5px var(--dark);;
+}
 header span{
     font-size:45px;
     color: var(--blue);
@@ -89,12 +92,13 @@ section {
     padding: 25px;
     margin:75px;
     border-radius: 10px;
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 section p {
+    font-size: 20px;
     padding: 15px;
-    flex: 1 1 70%
+    flex: 1 1 60%
 }
 section:hover {
     box-shadow: 0px 0px 6px 4px var(--dark);
@@ -119,10 +123,7 @@ aside h1 {
 aside h1:hover{
     color:var(--purple)
 }
-p {
-    font-size: 20px;
-    flex: 12 2;
-}
+/* container for card lists */
 .container{
     display: flex;
     flex: 1 1;
@@ -133,6 +134,31 @@ p {
     columns: 5;
     width: 100%;
 }
+/* Slight transparancy on cards in container before hover */
+.container > * {
+    opacity: 0.9;
+}
+/* Hover to 100% opacity on cards in container, apply shadow */
+.container > *:hover{
+    box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
+    opacity: 1;
+}
+.container > * > h1 {
+    padding:15px;
+    margin:10px;
+    background-color: var(--dark);
+    margin-left: 0px;
+    padding-left: 10px;
+    color:var(--light);
+    font-size: 20px;
+    text-align: left;
+}
+.container > * > p {
+    bottom: 0px;
+    align-items:end;
+    justify-content: flex-end;
+}
+/* Card class for projects section and more */
 .card {
     display: block;
     background-color: var(--dark);
@@ -146,9 +172,43 @@ p {
     background-size:cover;
     background-position: center;
     flex-wrap: wrap;
+}
+/* small image tiles, card class height override */
+#About > div {
+    height: 600px;
+    display: flex;
+    flex: 1 1 70%;
+    padding:0px;
+}
+/* small images in about card */
+.small-image{
+    flex: 1 1 40%;
+    margin:1%;
+    width:20%;
 
 }
+/* Small image tiles */
+#About div > * {
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#About div > *:nth-child(1){
+    background-image: url(./images/personal/me.jpg);
+}
+#About div > *:nth-child(2){
+    background-image: url(./images/personal/mochi.jpg);
+}
+#About div > *:nth-child(3){
+    background-image: url(./images/personal/luna.jpg);
+}
+#About div > *:nth-child(4){
+    background-image: url(./images/personal/ksp.png);
+}
 
+
+
+/* project background images */
 #first-project {
     display:block;
     flex: 2 4 100%;
@@ -163,68 +223,6 @@ p {
     background-position: center;
     
 }
-
-.small-image{
-    flex: 1 1 40%;
-    background-color: aliceblue;
-    margin: 5px;
-    width:20%;
-    height:180px;
-}
-/* small image tiles, card class height override */
-#About > div {
-    height: 400px;
-    display: flex;
-}
-.container > * {
-    opacity: 0.9;
-}
-.container > *:hover{
-    box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
-    opacity: 1;
-}
-.container > * > h1 {
-    padding:15px;
-    margin:10px;
-    background-color: var(--dark);
-    margin-left: 0px;
-    padding-left: 6px;
-    color:var(--light);
-    font-size: 20px;
-    text-align: left;
-}
-.container > * > p {
-    bottom: 0px;
-    align-items:end;
-    justify-content: flex-end;
-}
-
-#About div > *:nth-child(1){
-    background-image: url(./images/personal/luna.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#About div > *:nth-child(2){
-    background-image: url(./images/personal/mochi.jpg);
-    background-size:cover;  
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#About div > *:nth-child(3){
-    
-}
-#About div > *:nth-child(4){
-    
-}
-footer {
-    width: 100%;
-    bottom:0px;
-    text-align: center;
-    background-color: var(--light);
-    padding: 20px;
-}
-/* project background images */
 #Projects .container > *:nth-child(2){
     background-image: url(./images/projects/FCU.jpg);
 }
@@ -250,21 +248,21 @@ footer {
 #Work .container > *:nth-child(1){
     background-image: url(./images/work/generalinspection.png);
 }
+footer {
+    width: 100%;
+    bottom:0px;
+    text-align: center;
+    background-color: var(--light);
+    padding: 20px;
+}
 /* mobile compatible layout */
-@media screen and (max-width:1280px) {
-    #About {
-        margin-top: 45%;
-    }
+@media screen and (max-width:1700px) {
     #About > div {
         height: 600px;
     }
-    .small-image {
-        height: 280px;
-    }
     li {
-        display:grid;
-        columns: 1;
         align-items: center;
+        font-size: 20px;
     }
     nav {
         justify-content: center;
@@ -273,7 +271,7 @@ footer {
         text-align: center;
     }
     header h1{
-        font-size: 20px;
+        font-size: 40px;
     }
     header span, header img {
         display: none;
@@ -298,10 +296,9 @@ footer {
 @media screen and (max-width:1000px) {
     section {
         display: block;
-        margin-right: 0px;
-        margin-left: 0px;
-    }
-    section {
-        padding:4px;
+        margin-right: 4px;
+        margin-left: 4px;
+        padding-left:4px;
+        padding-right:4px;
     }
 }
