@@ -156,8 +156,9 @@ aside h1:hover{
 /* Hover to dim cards in container, apply shadow */
 .container > *:hover{
     box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
-    filter:brightness(90%);
+    filter:brightness(85%);
 }
+
 .container > * > h1 {
     color:var(--light);
     padding:15px;
