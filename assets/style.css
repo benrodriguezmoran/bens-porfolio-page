@@ -156,9 +156,8 @@ aside h1:hover{
 /* Hover to dim cards in container, apply shadow */
 .container > *:hover{
     box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
-    filter:brightness(85%);
+    filter:brightness(90%);
 }
-
 .container > * > h1 {
     color:var(--light);
     padding:15px;
@@ -312,12 +311,10 @@ footer {
     color: var(--light);
 }
 /* mobile compatible layout */
-@media screen and (max-width:1700px) {
+@media screen and (max-width:1500px) {
     /* about image card height */
     #About > div {
         height: 600px;
-    }
-    /* align nav elements center */
     }
     nav {
         justify-content: center;
@@ -325,6 +322,7 @@ footer {
     header {
         text-align: center;
     }
+    
     header span, header img {
         display: none;
     }
@@ -363,4 +361,5 @@ footer {
     header h1{
         font-size: 40px;
     }
+}
 }
