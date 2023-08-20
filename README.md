@@ -5,6 +5,6 @@ This is my humble portfolio, it uses flexbox dynamic styling and proper semantic
 ## Usage
 If you want an example to learn from, clone this repo, I will be updating it as I progress in my learning.
 ## Credits
-MSU Full-stack Bootcamp Coursework, MDN Reference, css-tricks.com
+Background image: [ESO/S. Brunier](https://www.eso.org/public/images/eso0932a/), MSU Full-stack Bootcamp Coursework, MDN Reference, css-tricks.com
 ## License
 Please refer to the license in the repo

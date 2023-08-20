@@ -1,15 +1,25 @@
 /* color variables */
 :root {
     --dark: rgb(39,41,50);
-    --light: rgb(238,244,237);
+    --light: rgb(255, 247, 236);
     --blue: rgb(77,126,168);
     --purple: rgb(173, 115, 154);
+    --clear: rgba(255, 235, 210, 0.7);
+    --blur: blur(.5rem);
 }
 /* universal selector, font and default color,  */
 * {
     font-family: 'DejaVu-Serif-Bold', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: var(--dark);
     transition:all .2s ease;
+}
+body {
+    display: block;
+    background-image: url(./images/eso0932a.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 header {
     width: 100%;
@@ -51,11 +61,12 @@ header a {
 nav {
     display: grid;
     color: var(--dark);
-    background-color: var(--light);
+    background-color: var(--clear);
     font-size: 25px;
     justify-content: right;
     padding:8px;
     padding-top: 5px;
+    backdrop-filter: var(--blur);
 }
 li {
     color:var(--dark);
@@ -77,23 +88,17 @@ li:hover {
     
 }
 
-body {
-    display: block;
-    background-image: url(./images/background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 
 section {
     display: flex;
-    background-color: rgba(238,244,237,0.5);
+    background-color: var(--clear);
     padding: 25px;
     margin:75px;
     border-radius: 10px;
     margin-right: 10%;
     margin-left: 10%;
+    backdrop-filter: var(--blur);
 }
 section p {
     font-size: 20px;
@@ -154,13 +159,12 @@ aside h1:hover{
     text-align: left;
 }
 .container > * > p {
-    bottom: 0px;
     align-items:end;
     justify-content: flex-end;
 }
 /* Card class for projects section and more */
 .card {
-    display: block;
+    display:flexbox;
     background-color: var(--dark);
     color: var(--light);
     height: 350px;
@@ -173,12 +177,17 @@ aside h1:hover{
     background-position: center;
     flex-wrap: wrap;
 }
-/* small image tiles, card class height override */
+/* OVERRIDE card class for small image tiles*/
 #About > div {
+    bottom: 10px;
     height: 600px;
     display: flex;
     flex: 1 1 70%;
     padding:0px;
+    
+}
+#About > div:hover{
+    box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
 }
 /* small images in about card */
 .small-image{
@@ -252,7 +261,7 @@ footer {
     width: 100%;
     bottom:0px;
     text-align: center;
-    background-color: var(--light);
+    background-color: var(--dark);
     padding: 20px;
 }
 /* mobile compatible layout */
