@@ -138,8 +138,8 @@ aside h1:hover{
 }
 .link::after {
     margin-left: 5px;
-    content: url(./images/link.png);
-    height:20px;
+    content: '🔗';
+    size:5px;
 }
 /* container for card lists */
 .container{
@@ -286,9 +286,17 @@ aside h1:hover{
     height:150px;
 }
 button {
+    background-color: var(--dark-clear);
     flex: 1 1 10%;
     margin:0.5%;
     padding:1%;
+    border-radius: 5px;
+}
+button:hover {
+    color: var(--purple);
+    background-color: var(--dark);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark)
 }
 footer {
     width: 100%;
@@ -346,4 +354,5 @@ footer {
         padding-left:4px;
         padding-right:4px;
     }
+}
 }
