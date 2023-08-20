@@ -1,11 +1,13 @@
 /* color variables */
 :root {
     --dark: rgb(39,41,50);
+    --bg-dark: rgb(161, 161, 161);
     --light: rgb(255, 247, 236);
     --blue: rgb(77,126,168);
     --purple: rgb(173, 115, 154);
     --clear: rgba(255, 235, 210, 0.7);
     --blur: blur(.5rem);
+    --preopacity: 0.9;
 }
 /* universal selector, font and default color,  */
 * {
@@ -56,6 +58,7 @@ header img {
     top:2px
 }
 header a {
+    font-weight: 600;
     color:var(--dark);
 }
 nav {
@@ -85,11 +88,7 @@ li:hover {
     background-image: linear-gradient(0deg, transparent 2px, var(--purple) 2px);
     box-shadow: 0px 0px 4px 2px var(--dark);
     border-radius: 2px;
-    
 }
-
-
-
 section {
     display: flex;
     background-color: var(--clear);
@@ -111,6 +110,17 @@ section:hover {
 #About {
     margin-top: 15%;
 }
+a {
+    color:var(--light);
+}
+a:hover {
+    color:var(--purple)
+}
+.link::after {
+    margin-left: 5px;
+    content: url(./images/link.png);
+    height:20px;
+}
 aside {
     width: 160px;
     display: flex;
@@ -126,6 +136,7 @@ aside h1 {
     font-size: 35px;
 }
 aside h1:hover{
+    display: inline-block;
     color:var(--purple)
 }
 /* container for card lists */
@@ -139,16 +150,14 @@ aside h1:hover{
     columns: 5;
     width: 100%;
 }
-/* Slight transparancy on cards in container before hover */
-.container > * {
-    opacity: 0.9;
-}
-/* Hover to 100% opacity on cards in container, apply shadow */
+
+/* Hover to dim cards in container, apply shadow */
 .container > *:hover{
     box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
-    opacity: 1;
+    filter:brightness(90%);
 }
 .container > * > h1 {
+    color:var(--light);
     padding:15px;
     margin:10px;
     background-color: var(--dark);
@@ -156,7 +165,8 @@ aside h1:hover{
     padding-left: 10px;
     color:var(--light);
     font-size: 20px;
-    text-align: left;
+    text-align: left;    background-image: url();
+
 }
 .container > * > p {
     align-items:end;
@@ -184,7 +194,6 @@ aside h1:hover{
     display: flex;
     flex: 1 1 70%;
     padding:0px;
-    
 }
 #About > div:hover{
     box-shadow: 5px 5px 0px 0px var(--purple), 0px 0px 6px 0px var(--dark);
@@ -214,9 +223,6 @@ aside h1:hover{
 #About div > *:nth-child(4){
     background-image: url(./images/personal/ksp.png);
 }
-
-
-
 /* project background images */
 #first-project {
     display:block;
@@ -257,12 +263,29 @@ aside h1:hover{
 #Work .container > *:nth-child(1){
     background-image: url(./images/work/generalinspection.png);
 }
+#Contact > div {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+#Contact {
+    height:150px;
+}
+button {
+    flex: 1 1 10%;
+    margin:0.5%;
+    padding:1%;
+}
 footer {
     width: 100%;
     bottom:0px;
     text-align: center;
     background-color: var(--dark);
     padding: 20px;
+    color: var(--light);
 }
 /* mobile compatible layout */
 @media screen and (max-width:1700px) {
