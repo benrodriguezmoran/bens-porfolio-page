@@ -310,6 +310,9 @@ footer {
     padding: 20px;
     color: var(--light);
 }
+#Work {
+    display: none;
+}
 /* mobile compatible layout */
 @media screen and (max-width:1500px) {
     /* about image card height */
